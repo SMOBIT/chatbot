@@ -1,6 +1,9 @@
 window.addEventListener("load", async () => {
-  const script = document.currentScript || [...document.getElementsByTagName("script")].pop();
-  const client = new URL(script.src).searchParams.get("client") || "default";
+  const client = window.CLIENT;
+  if (!client) {
+    console.error("❌ Kein 'CLIENT' definiert. Bitte vorher window.CLIENT = 'xyz' setzen.");
+    return;
+  }
 
   const configUrl = `https://smobit.github.io/chatbot/config/${client}.json`;
   const styleUrl = `https://smobit.github.io/chatbot/styles/${client}.css`;
