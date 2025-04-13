@@ -2,8 +2,8 @@
   const script = document.currentScript || [...document.getElementsByTagName("script")].pop();
   const client = new URL(script.src).searchParams.get("client") || "default";
 
-  const configUrl = `https://smobit.github.io/chatbots/config/${client}.json`;
-  const styleUrl = `https://smobit.github.io/chatbots/styles/${client}.css`;
+  const configUrl = `https://smobit.github.io/chatbot/config/${client}.json`;
+  const styleUrl = `https://smobit.github.io/chatbot/styles/${client}.css`;
 
   const style = document.createElement("link");
   style.rel = "stylesheet";
@@ -12,7 +12,7 @@
 
   const container = document.createElement("div");
   container.id = "chat-widget";
-  container.innerHTML = \`
+  container.innerHTML = `
     <button id="chat-button">💬</button>
     <div id="chat-box" style="display:none">
       <div id="chat-header">🤖 <span id="chat-title">Chat</span> <span id="chat-close">✖</span></div>
@@ -22,14 +22,14 @@
         <button id="chat-send">➤</button>
       </div>
     </div>
-  \`;
+  `;
   document.body.appendChild(container);
 
   const cfg = await fetch(configUrl).then(r => r.json());
   document.getElementById("chat-title").textContent = cfg.title || "Chat";
   const chatBody = document.getElementById("chat-body");
   chatBody.innerHTML = '<div class="chat-msg bot">' + cfg.intro + '</div>' + 
-    cfg.quickReplies.map(q => \`<div class="chat-quick" data-msg="\${q}">\${q}</div>\`).join('');
+    cfg.quickReplies.map(q => `<div class="chat-quick" data-msg="${q}">${q}</div>`).join('');
 
   const send = async (text) => {
     const userMsg = document.createElement("div");
