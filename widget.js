@@ -1,4 +1,4 @@
-(async () => {
+window.addEventListener("load", async () => {
   const script = document.currentScript || [...document.getElementsByTagName("script")].pop();
   const client = new URL(script.src).searchParams.get("client") || "default";
 
@@ -71,4 +71,4 @@
       send(e.target.dataset.msg);
     }
   });
-})();
+});
