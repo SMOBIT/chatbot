@@ -40,7 +40,10 @@ window.addEventListener("load", async () => {
     const res = await fetch(cfg.webhook, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: text, chatId: "chat_" + client })
+      body: JSON.stringify({
+        sessionId: "chat_" + client,
+        chatInput: text
+      })
     }).then(r => r.json());
 
     const botMsg = document.createElement("div");
