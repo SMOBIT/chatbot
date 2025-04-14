@@ -1,3 +1,4 @@
+
 #chat-widget {
   position: fixed;
   bottom: 24px;
@@ -32,16 +33,18 @@
   bottom: 24px;
   right: 24px;
   z-index: 1000;
+  overflow: hidden;
 }
 #chat-header {
-  background: #D85F27;
-  color: #fff;
+  background: #fff;
+  color: #D85F27;
   padding: 18px 20px;
   font-weight: 600;
   font-size: 18px;
   display: flex;
   align-items: center;
   gap: 10px;
+  border-bottom: 1px solid #eee;
 }
 #chat-header-logo {
   width: 24px;
@@ -109,6 +112,7 @@
   border-radius: 8px;
   cursor: pointer;
   font-size: 13px;
+  max-width: fit-content;
 }
 #chat-welcome-bubble {
   position: fixed;
