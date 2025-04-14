@@ -93,6 +93,7 @@
   max-width: 85%;
   font-size: 14px;
   line-height: 1.4;
+  position: relative;
 }
 .chat-msg.user {
   background: #f1f1f1;
@@ -102,6 +103,17 @@
   background: #D85F27;
   color: #fff;
   align-self: flex-start;
+}
+.chat-msg.bot::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #D85F27;
 }
 .chat-quick {
   background: #D85F27;
