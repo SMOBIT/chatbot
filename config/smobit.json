@@ -4,7 +4,7 @@
   "quickReplies": [
     "Es geht um eine Reparatur",
     "Ich möchte mehr zum Thema KI erfahren",
-    "Ich benötige eine individuelle Softwarelösung"
+    "Ich benötige eine individuelle Softwarelösung",
     "Ich interessiere mich für die Prozessberatung"
   ],
   "webhook": "https://n8n-mq6c.onrender.com/webhook/39e336ff-c51e-4087-a586-fb88d1295696/chat"
