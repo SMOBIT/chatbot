@@ -40,8 +40,15 @@
   font-weight: 600;
   font-size: 18px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 10px;
+}
+#chat-header-logo {
+  width: 24px;
+  height: 24px;
+  background: url('https://www.smobit.de/wp-content/uploads/2022/09/favicon.png') no-repeat center center;
+  background-size: contain;
+  border-radius: 50%;
 }
 #chat-body {
   flex: 1;
