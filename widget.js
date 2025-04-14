@@ -25,7 +25,7 @@ window.addEventListener("load", async () => {
   chatContainer.innerHTML = `
     <button id="chat-button">💬</button>
     <div id="chat-box" style="display:none">
-      <div id="chat-header">🤖 <span id="chat-title">Chat</span> <span id="chat-close">✖</span></div>
+      <div id="chat-header"><img src="https://www.smobit.de/wp-content/uploads/2022/09/favicon.png" alt="Logo" style="width:20px;height:20px;margin-right:10px;"> <span id="chat-title">Dein SMOBIT Assistent</span> <span id="chat-close">✖</span></div>
       <div id="chat-body"><div class="chat-msg bot">Lade...</div></div>
       <div id="chat-footer">
         <input type="text" id="chat-input" placeholder="Nachricht eingeben..." />
